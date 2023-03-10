@@ -1,12 +1,21 @@
+import java.util.ArrayList;
+
 public class Pokemon {
     private String name;
     private int level;
     private int current_life;
     private int max_life;
     private String type;
-    private String[] attacks;
+    private ArrayList<Attack> attacks;
+    private String status;
+    private int attack;
+    private int defense;
+    private int special_attack;
+    private int special_defense;
+    private int speed;
 
-    public Pokemon(String name, int level, int current_life, int max_life, String type, String[] attacks) {
+
+    public Pokemon(String name, int level, int current_life, int max_life, String type,  ArrayList<Attack> attacks, String status, int attack, int defense, int special_attack, int special_defense, int speed) {
         this.name = name;
         this.level = level;
         this.current_life = current_life;
@@ -55,4 +64,28 @@ public class Pokemon {
     public String getName() {
         return this.name;
     }
-}
+
+    public void setAttack(int attack) {
+        this.attack += attack;
+    }
+
+    public void setDefense(int defense) {
+        this.defense += defense;
+    }
+
+    public void setSpecialAttack(int special_attack) {
+        this.special_attack +=  special_attack;
+    }
+
+    public void setSpecialDefense(int special_defense) {
+        this.special_defense += special_defense;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed += speed;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    } 
+ }
